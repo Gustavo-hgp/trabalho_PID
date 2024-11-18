@@ -73,17 +73,22 @@ O código detecta rostos no stream de vídeo, calcula embeddings em tempo real e
 
 
 - Embedding: Representação numérica (vetor) do rosto, extraída pelo modelo VGG-Face.
+  
 - A função DeepFace.represent converte a imagem de referência em um embedding. Esse embedding será usado para comparação posterior.
 - Redimensiona o frame para facilitar o processamento.
+  
 - Converte o frame para escala de cinza, que é necessário para a detecção de rostos.
 - face_cascade.detectMultiScale: Detecta rostos no frame usando o Haar Cascade.
+  
 - Parâmetros:
  - - scaleFactor=1.1: Reduz a imagem para detectar rostos de diferentes tamanhos.
  - - minNeighbors=5: Número de vizinhos necessários para validar uma detecção.
  - - minSize=(50, 50): Tamanho mínimo dos rostos detectados.
+     
 - Extrai a região de interesse (ROI) correspondente ao rosto detectado.
 - compara o embedding do rosto detectado com o embedding da imagem de referência.
 - DeepFace.verify retorna uma distância (quanto menor, maior a semelhança).
+  
 - cv2.putText: Adiciona a similaridade no vídeo.
 - cv2.rectangle: Desenha um retângulo ao redor do rosto.
 - Exibe o frame processado com os resultados.
