@@ -51,6 +51,8 @@ Baixar arquivo do repositório - https://github.com/opencv/opencv/blob/master/da
 
 ## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+Gif demonstração de reconhecimento de emoções. 
+
+Dificuldade é que a biblioteca funciona melhor com arquivos estaticos, sendo assim, em videos ela "analisa" muito rapido as emoções, entao cada micro mudança como piscar, muda a analise. 
 
 <img src="/assets/gif-emoções.gif">
