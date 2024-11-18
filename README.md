@@ -64,5 +64,5 @@ Exeemplo imagem estatica:
 
 ## Demonstração - Detectção de Rostos
 
-<img src="/assets/gif-emoções.gif">
+<img src="/assets/2024-11-18 15-25-22.gif">
 
