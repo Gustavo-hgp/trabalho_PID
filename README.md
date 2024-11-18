@@ -46,7 +46,7 @@ Baixar arquivo do repositório - https://github.com/opencv/opencv/blob/master/da
 
 ## Ligação do ESP32-CAM
 
-![ESP32](https://blog.eletrogate.com/wp-content/uploads/2022/01/Setup_programar-1024x634.png) <img src="/assets/WhatsApp Image 2024-11-18 at 15.57.47.jpeg">
+![ESP32](https://blog.eletrogate.com/wp-content/uploads/2022/01/Setup_programar-1024x634.png) <img src="/assets/WhatsApp Image 2024-11-18 at 15.57.47.jpg">
 
 
 ## Demonstração - Analise de Sentimentos 
