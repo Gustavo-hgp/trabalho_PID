@@ -51,7 +51,9 @@ Baixar arquivo do repositório - https://github.com/opencv/opencv/blob/master/da
 
 ## Demonstração - Detecção de Rostos
 
-O código realiza a captura de vídeo em tempo real a partir de um stream fornecido por um ESP32-CAM, detecta rostos no vídeo usando o Haar Cascade, e exibe os resultados. Ele utiliza cv2.VideoCapture para acessar o stream, lê cada frame em um loop contínuo e converte o frame para escala de cinza, necessário para a detecção. Os rostos são identificados com detectMultiScale, que retorna as coordenadas dos rostos detectados, sobre os quais são desenhados retângulos no frame original. O vídeo processado é exibido em uma janela com cv2.imshow. O loop é interrompido ao pressionar a tecla 'q', liberando os recursos usados.
+O código realiza a captura de vídeo em tempo real a partir de um stream fornecido por um ESP32-CAM, detecta rostos no vídeo usando o Haar Cascade, e exibe os resultados. Lendo cada frame em um loop contínuo e convertendo para escala de cinza, necessário para a detecção. Os rostos são identificados com detectMultiScale, que retorna as coordenadas dos rostos detectados, sobre os quais são desenhados retângulos.
+
+- - O método detectMultiScale é uma função do OpenCV usada para detectar objetos em uma imagem (como rostos, olhos, corpos, etc.) com base em classificadores pré-treinados, como o Haar Cascade ou LBP (Local Binary Patterns). É amplamente utilizado para detectar múltiplas instâncias de um objeto em imagens ou vídeos.
 
 <img src="/assets/2024-11-18 15-25-22.gif">
 
