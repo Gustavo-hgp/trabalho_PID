@@ -49,6 +49,12 @@ Baixar arquivo do repositório - https://github.com/opencv/opencv/blob/master/da
 ![ESP32](https://blog.eletrogate.com/wp-content/uploads/2022/01/Setup_programar-1024x634.png) <img src="/assets/WhatsApp Image 2024-11-18 at 15.57.47.jpg">
 
 
+## Demonstração - Detecção de Rostos
+
+<img src="/assets/2024-11-18 15-25-22.gif">
+
+
+
 ## Demonstração - Analise de Sentimentos 
 
 Gif demonstração de reconhecimento de emoções. 
@@ -62,9 +68,7 @@ Exemplo com imagem estática:
 <img src="/assets/imagem-estaatica.png">
 
 
-## Demonstração - Detecção de Rostos
 
-<img src="/assets/2024-11-18 15-25-22.gif">
 
 ## Demonstração - Comparação de Rostos
 
