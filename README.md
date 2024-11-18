@@ -70,7 +70,7 @@ Exemplo com imagem estática:
 
 O código detecta rostos no stream de vídeo, calcula embeddings em tempo real e compara cada rosto detectado com uma imagem de referência. A similaridade é exibida diretamente no vídeo. Este é um exemplo de aplicação prática de reconhecimento facial em tempo real.
 
- ###### obs: quanto mais perto de 0 a distância entre os embeddings, maior a similaridade entre os rostos.
+
 
 - Embedding: Representação numérica (vetor) do rosto, extraída pelo modelo VGG-Face.
 - A função DeepFace.represent converte a imagem de referência em um embedding. Esse embedding será usado para comparação posterior.
@@ -87,5 +87,7 @@ O código detecta rostos no stream de vídeo, calcula embeddings em tempo real e
 - cv2.putText: Adiciona a similaridade no vídeo.
 - cv2.rectangle: Desenha um retângulo ao redor do rosto.
 - Exibe o frame processado com os resultados.
+  
+ ### obs: quanto mais perto de 0 a distância entre os embeddings, maior a similaridade entre os rostos.
 
 <img src="/assets/comparacao.gif">
