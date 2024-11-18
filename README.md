@@ -86,6 +86,20 @@ Exemplo com imagem estática:
 O código detecta rostos no stream de vídeo, calcula embeddings em tempo real e compara cada rosto detectado com uma imagem de referência. A similaridade é exibida diretamente no vídeo. Este é um exemplo de aplicação prática de reconhecimento facial em tempo real.
 
 - Embedding: Representação numérica (vetor) do rosto, extraída pelo modelo VGG-Face.
+
+- Converte o frame capturado através do esp32 para escala de cinza, que é necessário para a detecção de rostos e usao  face_cascade.detectMultiScale para detectar rostos no frame usando o Haar Cascade.
+  
+- Parâmetros:
+ - - scaleFactor=1.1: Reduz a imagem para detectar rostos de diferentes tamanhos.
+ - - minNeighbors=5: Número de vizinhos necessários para validar uma detecção.
+ - - minSize=(50, 50): Tamanho mínimo dos rostos detectados.
+     
+- Extrai a região de interesse (ROI) correspondente ao rosto detectado e compara o embedding do rosto detectado com o embedding da imagem de referência.
+-  #### obs: quanto mais perto de 0 a distância entre os embeddings, maior a similaridade entre os rostos.
+  
+- cv2.putText: Adiciona a similaridade no vídeo.
+- cv2.rectangle: Desenha um retângulo ao redor do rosto.
+- Exibe o frame processado com os resultados.
   
 ### Características do VGG-Face:
 #### 1. Arquitetura de Rede:
@@ -94,24 +108,9 @@ O código detecta rostos no stream de vídeo, calcula embeddings em tempo real e
   - A arquitetura foi projetada para ser simples e profunda, o que ajuda a capturar padrões mais complexos nas imagens.
  
 #### 2. Treinamento:
-O VGG-Face foi treinado com um grande conjunto de dados de rostos humanos, utilizando mais de 2,6 milhões de imagens de 2.622 pessoas diferentes. Durante o treinamento, o modelo aprendeu a extrair características faciais únicas e representações vetoriais de rostos (também conhecidas como embeddings). A ideia é que cada rosto tenha um vetor único (embedding) que representa suas características faciais, o que permite a comparação e a identificação de pessoas.
+  - O VGG-Face foi treinado com um grande conjunto de dados de rostos humanos, utilizando mais de 2,6 milhões de imagens de 2.622 pessoas diferentes. Durante o treinamento, o modelo aprendeu a extrair características faciais únicas e representações vetoriais de rostos (também conhecidas como embeddings). A ideia é que cada rosto tenha um vetor único (embedding) que representa suas características faciais, o que permite a comparação e a identificação de pessoas.
 
-  
-- Converte o frame para escala de cinza, que é necessário para a detecção de rostos.
-- face_cascade.detectMultiScale: Detecta rostos no frame usando o Haar Cascade.
-  
-- Parâmetros:
- - - scaleFactor=1.1: Reduz a imagem para detectar rostos de diferentes tamanhos.
- - - minNeighbors=5: Número de vizinhos necessários para validar uma detecção.
- - - minSize=(50, 50): Tamanho mínimo dos rostos detectados.
-     
-- Extrai a região de interesse (ROI) correspondente ao rosto detectado e compara o embedding do rosto detectado com o embedding da imagem de referência.
--  ### obs: quanto mais perto de 0 a distância entre os embeddings, maior a similaridade entre os rostos.
-- DeepFace.verify retorna uma distância (quanto menor, maior a semelhança).
-  
-- cv2.putText: Adiciona a similaridade no vídeo.
-- cv2.rectangle: Desenha um retângulo ao redor do rosto.
-- Exibe o frame processado com os resultados.
+
   
 
 
