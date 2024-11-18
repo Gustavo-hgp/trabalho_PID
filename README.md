@@ -49,10 +49,20 @@ Baixar arquivo do repositório - https://github.com/opencv/opencv/blob/master/da
 ![ESP32](https://blog.eletrogate.com/wp-content/uploads/2022/01/Setup_programar-1024x634.png)
 
 
-## Demonstração
+## Demonstração - Analise de Sentimentos 
 
 Gif demonstração de reconhecimento de emoções. 
 
 Dificuldade é que a biblioteca funciona melhor com arquivos estaticos, sendo assim, em videos ela "analisa" muito rapido as emoções, entao cada micro mudança como piscar, muda a analise. 
 
 <img src="/assets/gif-emoções.gif">
+
+Exeemplo imagem estatica: 
+
+<img src="/assets/imagem-estaatica.png">
+
+
+## Demonstração - Detectção de Rostos
+
+<img src="/assets/gif-emoções.gif">
+
